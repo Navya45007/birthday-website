@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For When You Need Me – Bhavya</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom right, #f5e4d7, #e9d4bd);
+      text-align: center;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 60px auto;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #815b4a;
+      margin-bottom: 15px;
+    }
+
+    p.subtitle {
+      color: #6a4a3a;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: block;
+      width: 80%;
+      margin: 10px auto;
+      padding: 12px;
+      font-size: 15px;
+      border-radius: 25px;
+      background: #f0dfcf;
+      border: 1px solid #d1b096;
+      color: #6a4a3a;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #815b4a;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* Popup Modal Styling */
+    .modal {
+      display: none; /* Hidden initially */
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 25px;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 18px;
+      text-align: left;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      animation: slideIn 0.3s ease-in-out;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    @keyframes slideIn {
+      from {transform: translateY(40px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+
+    .close-btn {
+      background: #815b4a;
+      color: white;
+      padding: 8px 20px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      display: block;
+      margin: 15px auto 0;
+      transition: 0.3s;
+    }
+
+    .close-btn:hover {
+      background: #9d6b57;
+    }
+.nav-buttons {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.nav-buttons a {
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  background: #815b4a;
+  color: #fff;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.nav-buttons a:hover {
+  background: #9d6b57;
+  transform: scale(1.05);
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>for when you need me, bhavya 💛</h1>
+    <p class="subtitle">click on any button below & feel me with you.</p>
+
+    <!-- Buttons for each note -->
+    <button class="btn" onclick="openNote('miss')">when you miss me 🤍</button>
+    <button class="btn" onclick="openNote('low')">when you feel low 🕊️</button>
+    <button class="btn" onclick="openNote('over')">when you're overthinking 🌙</button>
+    <button class="btn" onclick="openNote('unloved')">when you feel unloved 💌</button>
+    <button class="btn" onclick="openNote('pissed')">when you are pissed off 😤</button>
+  </div>
+
+  <!-- POPUP Modals -->
+  <div class="modal" id="miss">
+    <div class="modal-content">
+      Whenever you feel you miss me, of course I will be missing you even more at that moment.<br>
+      But remember, no matter how far we are, you will always be my safest person.<br>
+      I will always be your well-wisher, and I love you sooo muchhhh.
+      <button class="close-btn" onclick="closeNote('miss')">close</button>
+    </div>
+  </div>
+
+  <div class="modal" id="low">
+    <div class="modal-content">
+      Remember you are one of the strongest persons I have met.  
+      You are just the best at whatever you do.  
+      The way you care for people around you more than you do for yourself  
+      is something I always admire in you.  
+      I love you so much — keep smiling babbyyyyy :)
+      <button class="close-btn" onclick="closeNote('low')">close</button>
+    </div>
+  </div>
+
+  <div class="modal" id="over">
+    <div class="modal-content">
+      Remember… whatever might be the reason you are opening this —  
+      I will always be there for you.  
+      I will always try to understand  
+      and I will always try to be your comfort zone.  
+      I love you sooo muchh.
+      <button class="close-btn" onclick="closeNote('over')">close</button>
+    </div>
+  </div>
+
+  <div class="modal" id="unloved">
+    <div class="modal-content">
+      Remember: I love you.<br>
+      I will always choose you — over and over again.  
+      I feel blessed that you chose me too.  
+      I’ll always be here for you.
+      <button class="close-btn" onclick="closeNote('unloved')">close</button>
+    </div>
+  </div>
+
+  <div class="modal" id="pissed">
+    <div class="modal-content">
+      Okay fine, calm down.  
+      Stay patient… breathe.  
+      You are someone who understands instead of reacting.  
+      And that’s one of the things I love most about you.
+      <button class="close-btn" onclick="closeNote('pissed')">close</button>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    function openNote(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+    function closeNote(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>
+<div class="nav-buttons">
+  <a href="index.html">⟵ back to start</a>
+  &nbsp;&nbsp;
+  <a href="b_stage3.html">see all the edits →</a>
+</div>
+
+
+</body>
+</html>

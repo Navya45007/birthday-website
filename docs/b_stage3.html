@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>All The Days I Loved You Out Loud – Bhavya</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom right, #f5e4d7, #e9d4bd);
+      color: #3e2d23;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      animation: fadeIn 1.3s ease-in-out;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #815b4a;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 15px;
+      margin-bottom: 25px;
+      color: #6a4a3a;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: #f8eee4;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    }
+
+    .card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .caption {
+      padding: 10px 12px 12px;
+      font-size: 14px;
+      color: #6a4a3a;
+      text-align: center;
+    }
+
+    .back-nav {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .back-nav a {
+      text-decoration: none;
+      padding: 10px 24px;
+      border-radius: 25px;
+      background: #815b4a;
+      color: #fff;
+      font-size: 14px;
+      transition: 0.3s ease;
+    }
+
+    .back-nav a:hover {
+      background: #9d6b57;
+      transform: scale(1.03);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Lightbox / Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .modal-inner {
+  background: #fff;
+  padding: 10px;
+  border-radius: 24px;
+  max-width: 360px;          /* narrower – like a phone */
+  max-height: 90vh;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  text-align: center;
+}
+
+.modal-inner img {
+  width: 100%;
+  height: auto;              /* keep natural proportion */
+  max-height: 80vh;          /* don’t go out of screen */
+  object-fit: contain;
+  border-radius: 18px;
+}
+
+    
+    .modal-caption {
+      margin-top: 10px;
+      font-size: 15px;
+      color: #6a4a3a;
+    }
+
+    .close-btn {
+      margin-top: 12px;
+      background: #815b4a;
+      color: #fff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 13px;
+      transition: 0.3s;
+    }
+
+    .close-btn:hover {
+      background: #9d6b57;
+    }
+.nav-buttons {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.nav-buttons a {
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  background: #815b4a;
+  color: #fff;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.nav-buttons a:hover {
+  background: #9d6b57;
+  transform: scale(1.05);
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>all the days i loved you out loud 💛</h1>
+    <p class="subtitle">
+      every edit, every word, every little piece of love from this month —  
+      all in one place for you to come back to whenever you want.
+    </p>
+
+    <div class="grid">
+      <!-- each card now uses data-* attributes -->
+      <div class="card" data-src="BJ/edit1.jpg" data-caption="you’re rare…">
+        <img src="BJ/edit1.jpg" alt="edit 1">
+        <div class="caption">you’re rare…</div>
+      </div>
+
+      <div class="card" data-src="BJ/edit2.jpg" data-caption="you are my consistency…">
+        <img src="BJ/edit2.jpg" alt="edit 2">
+        <div class="caption">you are my consistency…</div>
+      </div>
+
+      <div class="card" data-src="BJ/edit3.jpg" data-caption="you bring peace with you…">
+        <img src="BJ/edit3.jpg" alt="edit 3">
+        <div class="caption">you bring peace with you…</div>
+      </div>
+
+      <div class="card" data-src="BJ/edit4.jpg" data-caption="the impact you have…">
+        <img src="BJ/edit4.jpg" alt="edit 4">
+        <div class="caption">the impact you have…</div>
+      </div>
+
+      <div class="card" data-src="BJ/edit5.jpg" data-caption="you are my safe space…">
+        <img src="BJ/edit5.jpg" alt="edit 5">
+        <div class="caption">you are my safe space…</div>
+      </div>
+
+      <div class="card" data-src="BJ/edit6.jpg" data-caption="just for who you are…">
+        <img src="BJ/edit6.jpg" alt="edit 6">
+        <div class="caption">just for who you are…</div>
+      </div>
+
+      <div class="card" data-src="BJ/edit7.jpg" data-caption="the kind of love you give…">
+        <img src="BJ/edit7.jpg" alt="edit 7">
+        <div class="caption">the kind of love you give…</div>
+      </div>
+
+      <div class="card" data-src="BJ/edit8.jpg" data-caption="i love the way you love…">
+        <img src="BJ/edit8.jpg" alt="edit 8">
+        <div class="caption">i love the way you love…</div>
+      </div>
+
+      <div class="card" data-src="BJ/edit9.jpg" data-caption="you hold us together…">
+        <img src="BJ/edit9.jpg" alt="edit 9">
+        <div class="caption">you hold us together…</div>
+      </div>
+
+      <div class="card" data-src="BJ/edit10.jpg" data-caption="you’re like home away from home…">
+        <img src="BJ/edit10.jpg" alt="edit 10">
+        <div class="caption">you’re like home away from home…</div>
+      </div>
+
+      <div class="card" data-src="BJ/edit11.jpg" data-caption="you’ve been calm in the chaos…">
+        <img src="BJ/edit11.jpg" alt="edit 11">
+        <div class="caption">you’ve been calm in the chaos…</div>
+      </div>
+
+      <div class="card" data-src="BJ/edit12.jpg" data-caption="if you only knew…">
+        <img src="BJ/edit12.jpg" alt="edit 12">
+        <div class="caption">if you only knew…</div>
+      </div>
+
+      <div class="card" data-src="BJ/edit13.jpg" data-caption="you’ll never know…">
+        <img src="BJ/edit13.jpg" alt="edit 13">
+        <div class="caption">you’ll never know…</div>
+      </div>
+
+      <div class="card" data-src="BJ/edit14.jpg" data-caption="things changed between us…">
+        <img src="BJ/edit14.jpg" alt="edit 14">
+        <div class="caption">things changed between us…</div>
+      </div>
+
+      <div class="card" data-src="BJ/edit15.jpg" data-caption="see yourself the way i do…">
+        <img src="BJ/edit15.jpg" alt="edit 15">
+        <div class="caption">see yourself the way i do…</div>
+      </div>
+
+      <div class="card" data-src="BJ/edit16.jpg" data-caption="you make the ordinary feel special…">
+        <img src="BJ/edit16.jpg" alt="edit 16">
+        <div class="caption">you make the ordinary feel special…</div>
+      </div>
+
+      <div class="card" data-src="BJ/edit17.jpg" data-caption="to the version of you i see…">
+        <img src="BJ/edit17.jpg" alt="edit 17">
+        <div class="caption">to the version of you i see…</div>
+      </div>
+
+      <div class="card" data-src="BJ/edit18.jpg" data-caption="the way you help me be myself…">
+        <img src="BJ/edit18.jpg" alt="edit 18">
+        <div class="caption">the way you help me be myself…</div>
+      </div>
+
+      <div class="card" data-src="BJ/edit19.jpg" data-caption="for youu…">
+        <img src="BJ/edit19.jpg" alt="edit 19">
+        <div class="caption">for youu…</div>
+      </div>
+
+      <div class="card" data-src="BJ/edit20.jpg" data-caption="a letter…">
+        <img src="BJ/edit20.jpg" alt="edit 20">
+        <div class="caption">a letter…</div>
+      </div>
+    </div>
+
+    <div class="back-nav">
+      <a href="index.html">⟵ back to first page</a>
+      &nbsp;&nbsp;
+    </div>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal">
+    <div class="modal-inner">
+      <img id="modal-img" src="" alt="full edit">
+      <div class="modal-caption" id="modal-caption"></div>
+      <button class="close-btn" onclick="closeModal()">close</button>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalCaption = document.getElementById('modal-caption');
+
+    function openModal(src, caption) {
+      modalImg.src = src;
+      modalCaption.textContent = caption;
+      modal.style.display = 'flex';
+    }
+
+    function closeModal() {
+      modal.style.display = 'none';
+      modalImg.src = '';
+      modalCaption.textContent = '';
+    }
+
+    // attach click to every card
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+        const src = card.dataset.src;
+        const caption = card.dataset.caption;
+        openModal(src, caption);
+      });
+    });
+
+    // close when clicking outside
+    modal.addEventListener('click', e => {
+      if (e.target === modal) closeModal();
+    });
+  </script>
+<div class="nav-buttons">
+    <a href="b_day.html">✨ final letter to you →</a>
+</div>
+
+</body>
+</html>
